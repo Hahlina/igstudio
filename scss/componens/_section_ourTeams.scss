@@ -1,0 +1,99 @@
+.section_ourTeams {
+  width: 100%;
+  padding: 0 clamp(0.625rem, -9.589rem + 21.28vw, 9.563rem);
+  margin-top: clamp(3.125rem, 1.268rem + 9.29vw, 9.625rem);
+  h2 {
+    @include font(clamp(1.875rem, 1.446rem + 2.14vw, 3.375rem), 600, 143);
+    margin-bottom: clamp(1.25rem, -0.125rem + 6.88vw, 6.063rem);
+    text-align: center;
+  }
+
+  .team {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: clamp(0.313rem, -0.509rem + 4.11vw, 3.188rem);
+    @include four_k {
+      gap: 30px;
+    }
+  }
+  .teammate {
+    width: clamp(17.5rem, 16.357rem + 5.71vw, 21.5rem);
+    height: 109px;
+    display: flex;
+    align-items: center;
+    border-radius: $borderRadius_14;
+    cursor: pointer;
+    transition: background-color 0.5s linear, transform 0.5s linear;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.1px);
+    -webkit-backdrop-filter: blur(3.1px);
+    border: 1px solid rgba(255, 255, 255, 0.19);
+    &:hover {
+      background-color: $yellow;
+      transform: scale(1.05);
+      .characteristic {
+        color: $black;
+        p:nth-child(2) {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  .avatar {
+    @include box(68px);
+    margin-left: 26px;
+    margin-right: 22px;
+    border-radius: 50%;
+  }
+  .characteristic {
+    transition: color 0.5s linear;
+    p:nth-child(1) {
+      @include font(24px, 600, 83);
+      margin-bottom: 6px;
+    }
+    p:nth-child(2) {
+      @include font(14px, 400, 142);
+      margin-bottom: 6px;
+      opacity: 0.3;
+    }
+  }
+  .teammate:nth-child(1) {
+    .avatar {
+      background: url("./src/assets/team_1.png");
+      @include cover-background;
+    }
+  }
+  .teammate:nth-child(2) {
+    .avatar {
+      background: url("./src/assets/team_2.png");
+      @include cover-background;
+    }
+  }
+  .teammate:nth-child(3) {
+    .avatar {
+      background: url("./src/assets/team_3.png");
+      @include cover-background;
+    }
+  }
+  .teammate:nth-child(4) {
+    .avatar {
+      background: url("./src/assets/team_4.png");
+      @include cover-background;
+    }
+  }
+  .teammate:nth-child(5) {
+    .avatar {
+      background: url("./src/assets/team_5.png");
+      @include cover-background;
+    }
+  }
+  .teammate:nth-child(6) {
+    .avatar {
+      background: url("./src/assets/team_6.png");
+      @include cover-background;
+    }
+  }
+}

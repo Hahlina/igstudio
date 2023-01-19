@@ -1,0 +1,90 @@
+.section_AreaOfPractic {
+  width: 100%;
+  padding: 0 clamp(0.625rem, -9.589rem + 21.28vw, 9.563rem);
+  margin-top: clamp(3.125rem, 1.268rem + 9.29vw, 9.625rem);
+  h2 {
+    @include font(clamp(1.875rem, 1.446rem + 2.14vw, 3.375rem), 600, 143);
+    text-align: center;
+    margin-bottom: 65px;
+  }
+  .img_block {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .item {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: $borderRadius_14;
+    height: 342px;
+    width: 100%;
+    @include md {
+      width: 354px;
+    }
+    &:nth-child(1),
+    &:nth-child(4),
+    &:nth-child(5) {
+      width: 750px;
+      height: 342px;
+    }
+    p {
+      @include font(24px, 600, 83);
+      margin-bottom: 41px;
+    }
+    &:nth-child(1) {
+      background: url("./src/assets/img_1.png");
+      @include cover-background;
+    }
+    &:nth-child(2) {
+      background: url("./src/assets/img_2.png");
+      @include cover-background;
+    }
+    &:nth-child(3) {
+      background: url("./src/assets/img_3.png");
+      @include cover-background;
+      transform: scaleX(-1);
+      p {
+        transform: scaleX(-1);
+      }
+    }
+    &:nth-child(4) {
+      background: url("./src/assets/img_4.png");
+      @include cover-background;
+    }
+    &:nth-child(5) {
+      background: url("./src/assets/img_5.png");
+      @include cover-background;
+    }
+    &:nth-child(6) {
+      background: url("./src/assets/img_6.png");
+      @include cover-background;
+      width: 750px;
+      @include xl {
+        width: 354px;
+      }
+    }
+    &:nth-child(6),
+    &:nth-child(2),
+    &:nth-child(3) {
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: $borderRadius_14;
+      }
+    }
+  }
+  p {
+    @include font(24px, 600, 83);
+    margin-bottom: 41px;
+    position: relative;
+    z-index: 5;
+  }
+}
