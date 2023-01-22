@@ -1,4 +1,4 @@
-const gap = 1;
+const gap = 6;
 
 const carousel = document.getElementById("carousel"),
   content = document.getElementById("content"),
