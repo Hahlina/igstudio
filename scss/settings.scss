@@ -45,6 +45,6 @@ body {
   @include flex-column;
   align-items: center;
 }
-// body._lock {
-//   overflow: hidden;
-// }
+body._lock {
+  overflow: hidden;
+}

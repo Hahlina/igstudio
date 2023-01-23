@@ -20,23 +20,30 @@
     border: 1.4px solid #ffffff1a;
     border-radius: $borderRadius_14;
     cursor: pointer;
-    .img_card {
-      @include box(clamp(5.625rem, 5.25rem + 1.88vw, 6.938rem));
-      background: url("/src/assets/icon_gift.jpg");
-      @include cover-background;
-      border-radius: 50%;
-      margin-bottom: 28px;
+    transition: all 0.4s ease-in;
+    &:hover {
+      transform: translateY(-1.5rem);
+      border: $yellow 0.2em solid;
+      border-radius: 2.5rem 0 2.5rem 0;
     }
-    h3 {
-      @include font(clamp(1.25rem, 1.179rem + 0.36vw, 1.5rem), 600, 83);
-      margin-bottom: 26px;
-    }
-    p {
-      @include font(14px, 500, 163);
-      margin-bottom: 26px;
-      opacity: 0.3;
-      margin-bottom: 22px;
-    }
+  }
+  .img_card {
+    @include box(clamp(5.625rem, 5.25rem + 1.88vw, 6.938rem));
+    background: url("/src/assets/icon_gift.jpg");
+    @include cover-background;
+    border-radius: 50%;
+    margin-bottom: 28px;
+    transition: filter 0.5s linear;
+  }
+  h3 {
+    @include font(clamp(1.25rem, 1.179rem + 0.36vw, 1.5rem), 600, 83);
+    margin-bottom: 26px;
+  }
+  p {
+    @include font(14px, 500, 163);
+    margin-bottom: 26px;
+    opacity: 0.3;
+    margin-bottom: 22px;
   }
 
   .btn_card {
@@ -45,8 +52,10 @@
     background-color: $yellow;
     border-radius: $borderRadius_23;
     border: none;
+
     a {
       @include font(14px, 600, 163);
     }
+    @include btn_animated2;
   }
 }

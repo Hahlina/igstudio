@@ -18,6 +18,7 @@
     align-items: flex-end;
     justify-content: center;
     border-radius: $borderRadius_14;
+    cursor: pointer;
     height: 342px;
     width: 100%;
     @include md {
@@ -29,36 +30,39 @@
       width: 750px;
       height: 342px;
     }
+    transition: transform 0.5s linear;
+    &:hover {
+      transform: scale(1.05);
+      p {
+        color: $yellow;
+      }
+    }
     p {
       @include font(24px, 600, 83);
       margin-bottom: 41px;
     }
     &:nth-child(1) {
-      background: url("./src/assets/img_1.png");
+      background: url("../src/assets/img_1.png");
       @include cover-background;
     }
     &:nth-child(2) {
-      background: url("./src/assets/img_2.png");
+      background: url("/src/assets/img_2.png");
       @include cover-background;
     }
     &:nth-child(3) {
-      background: url("./src/assets/img_3.png");
+      background: url("/src/assets/img_3.png");
       @include cover-background;
-      transform: scaleX(-1);
-      p {
-        transform: scaleX(-1);
-      }
     }
     &:nth-child(4) {
-      background: url("./src/assets/img_4.png");
+      background: url("/src/assets/img_4.png");
       @include cover-background;
     }
     &:nth-child(5) {
-      background: url("./src/assets/img_5.png");
+      background: url("/src/assets/img_5.png");
       @include cover-background;
     }
     &:nth-child(6) {
-      background: url("./src/assets/img_6.png");
+      background: url("/src/assets/img_6.png");
       @include cover-background;
       width: 750px;
       @include xl {
@@ -86,5 +90,6 @@
     margin-bottom: 41px;
     position: relative;
     z-index: 5;
+    transition: color 0.5s linear;
   }
 }

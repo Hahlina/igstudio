@@ -62,37 +62,37 @@
   }
   .teammate:nth-child(1) {
     .avatar {
-      background: url("./src/assets/team_1.png");
+      background: url("../src/assets/team_1.png");
       @include cover-background;
     }
   }
   .teammate:nth-child(2) {
     .avatar {
-      background: url("./src/assets/team_2.png");
+      background: url("../src/assets/team_2.png");
       @include cover-background;
     }
   }
   .teammate:nth-child(3) {
     .avatar {
-      background: url("./src/assets/team_3.png");
+      background: url("../src/assets/team_3.png");
       @include cover-background;
     }
   }
   .teammate:nth-child(4) {
     .avatar {
-      background: url("./src/assets/team_4.png");
+      background: url("../src/assets/team_4.png");
       @include cover-background;
     }
   }
   .teammate:nth-child(5) {
     .avatar {
-      background: url("./src/assets/team_5.png");
+      background: url("../src/assets/team_5.png");
       @include cover-background;
     }
   }
   .teammate:nth-child(6) {
     .avatar {
-      background: url("./src/assets/team_6.png");
+      background: url("../src/assets/team_6.png");
       @include cover-background;
     }
   }

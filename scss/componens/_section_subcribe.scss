@@ -49,6 +49,7 @@
       @include md {
         border-radius: 0px;
       }
+      caret-color: $yellow;
     }
     input[type="text"] {
       @include md {
@@ -68,5 +69,6 @@
     a {
       @include font(14px, 700, 137);
     }
+    @include btn_animated2;
   }
 }

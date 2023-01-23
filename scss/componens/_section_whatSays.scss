@@ -48,9 +48,7 @@
     &:hover {
       background: $yellow;
     }
-    &:active {
-      //   transform: scale(1.1);
-    }
+
     img {
       width: 29px;
       height: 19px;
@@ -69,6 +67,20 @@
     grid-auto-flow: column;
     margin: auto;
     box-sizing: border-box;
+
+    &:hover {
+      .item {
+        filter: blur(3px);
+        opacity: 0.5;
+        transform: scale(0.98);
+        &:hover {
+          transform: scale(1);
+          filter: blur(0px);
+          opacity: 1;
+          box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+        }
+      }
+    }
   }
 
   .item {
@@ -78,9 +90,22 @@
     border: 1.4px solid #ffffff1a;
     border-radius: $borderRadius_14;
     padding-left: 26px;
+    cursor: pointer;
+    transition: border 0.5s linear, transform 0.5s linear, filter 0.5s linear,
+      opacity 0.5s linear;
+    &:hover {
+      border: 1.4px solid $yellow;
+      .avatar {
+        box-shadow: 0px 0px 20px 1px $yellow;
+      }
+      p:nth-child(2) {
+        color: $yellow;
+      }
+    }
     p:nth-child(2) {
       @include font(24px, 600, 83);
       margin-bottom: 10px;
+      transition: color 0.5s linear;
     }
     p:nth-child(3) {
       @include font(14px, 400, 142);
@@ -95,7 +120,7 @@
       display: block;
       width: 55px;
       height: 38px;
-      background: url("./src/assets/quote.svg");
+      background: url("../src/assets/quote.svg");
       @include cover-background;
       position: absolute;
       top: 28px;
@@ -104,58 +129,59 @@
   }
   .avatar {
     @include box(clamp(5.625rem, 5.25rem + 1.88vw, 6.938rem));
-    background: url("./src/assets/avatar_9.jpeg");
+    background: url("../src/assets/avatar_9.jpeg");
     @include cover-background;
     border-radius: 50%;
     margin-top: 36px;
     margin-bottom: 20px;
+    transition: box-shadow 0.3s linear;
   }
   .item {
     &:nth-child(1) {
       .avatar {
-        background: url("./src/assets/avatar_1.png");
+        background: url("../src/assets/avatar_1.png");
         @include cover-background;
       }
     }
     &:nth-child(2) {
       .avatar {
-        background: url("./src/assets/avatar_2.png");
+        background: url("../src/assets/avatar_2.png");
         @include cover-background;
       }
     }
     &:nth-child(3) {
       .avatar {
-        background: url("./src/assets/avatar_3.png");
+        background: url("../src/assets/avatar_3.png");
         @include cover-background;
       }
     }
     &:nth-child(4) {
       .avatar {
-        background: url("./src/assets/avatar_4.jpeg");
+        background: url("../src/assets/avatar_4.jpeg");
         @include cover-background;
       }
     }
     &:nth-child(5) {
       .avatar {
-        background: url("./src/assets/avatar_5.jpeg");
+        background: url("../src/assets/avatar_5.jpeg");
         @include cover-background;
       }
     }
     &:nth-child(6) {
       .avatar {
-        background: url("./src/assets/avatar_6.jpeg");
+        background: url("../src/assets/avatar_6.jpeg");
         @include cover-background;
       }
     }
     &:nth-child(7) {
       .avatar {
-        background: url("./src/assets/avatar_7.jpeg");
+        background: url("../src/assets/avatar_7.jpeg");
         @include cover-background;
       }
     }
     &:nth-child(8) {
       .avatar {
-        background: url("./src/assets/avatar_8.jpeg");
+        background: url("../src/assets/avatar_8.jpeg");
         @include cover-background;
       }
     }

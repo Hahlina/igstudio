@@ -8,11 +8,20 @@
   align-items: center;
   justify-content: center;
   background-color: #171717;
+  .logo {
+    cursor: pointer;
+    img {
+      transition: filter 0.3s linear;
+      &:hover {
+        filter: brightness(0) saturate(100%) invert(70%) sepia(67%)
+          saturate(377%) hue-rotate(2deg) brightness(92%) contrast(96%);
+      }
+    }
+  }
   .list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-
     justify-content: center;
     width: 100%;
     margin-bottom: clamp(1.875rem, 0.625rem + 6.25vw, 6.25rem);
@@ -38,6 +47,13 @@
     gap: 23px;
     img {
       @include box(30px);
+      &:hover {
+        filter: brightness(0) saturate(100%) invert(58%) sepia(44%)
+          saturate(3841%) hue-rotate(335deg) brightness(101%) contrast(101%);
+      }
+    }
+    a {
+      padding: 0;
     }
   }
   .down_list {
@@ -48,4 +64,5 @@
       gap: 25px;
     }
   }
+  @include nav_hover;
 }
